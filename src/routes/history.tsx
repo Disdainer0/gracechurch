@@ -88,9 +88,9 @@ function HistoryPage() {
       </section>
 
       {/* Present-day block */}
-      <section className="bg-secondary/40">
+      <section className="bg-secondary/40 overflow-hidden">
         <div className="container-grace grid grid-cols-1 gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-20">
-          <div className="md:col-span-5 flex items-center justify-center">
+          <div className="hidden md:flex md:col-span-5 items-center justify-center">
             <DoveIcon className="h-32 w-44 text-foreground/80" />
           </div>
           <div className="md:col-span-7 space-y-5 text-[15px] md:text-[17px] leading-relaxed">

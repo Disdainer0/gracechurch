@@ -57,7 +57,7 @@ function HomePage() {
       </section>
 
       {/* ABOUT */}
-      <section className="container-grace py-16 md:py-24">
+      <section className="container-grace py-16 md:py-24 overflow-hidden">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-6">
             <h2 className="text-h3">ПРО ЦЕРКВУ</h2>
@@ -89,7 +89,7 @@ function HomePage() {
       </section>
 
       {/* BELIEFS */}
-      <section className="container-grace py-16 md:py-24">
+      <section className="container-grace py-16 md:py-24 overflow-hidden">
         <h2 className="text-h3">НАШІ ВІРУВАННЯ</h2>
 
         <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-14 md:grid-cols-12">
@@ -172,7 +172,7 @@ function HomePage() {
       </section>
 
       {/* MEDIA */}
-      <section className="container-grace py-16 md:py-24">
+      <section className="container-grace py-16 md:py-24 overflow-hidden">
         <h2 className="text-h3">СЛУЖІННЯ</h2>
 
         <div className="mt-10 relative aspect-video w-full overflow-hidden bg-secondary">
@@ -210,7 +210,7 @@ function HomePage() {
           <div className="absolute inset-0 bg-background/40" />
       
           <div className="absolute inset-0 flex flex-col justify-between p-6">
-            <h3 className="text-[56px] leading-none font-light">
+            <h3 className="text-[36px] md:text-[56px] leading-none font-light">
               НЕДІЛЯ
             </h3>
       

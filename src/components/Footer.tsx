@@ -23,13 +23,13 @@ export function Footer() {
       <div className="container-grace pt-8 pb-8">
 
         {/* TOP ROW */}
-        <div className="flex justify-between items-start">
+        <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-start">
 
-          <h2 className="text-4xl md:text-[64px] leading-none font-light uppercase tracking-[0.08em]">
+          <h2 className="text-[32px] md:text-[64px] leading-none font-light uppercase tracking-[0.08em]">
             Контакти
           </h2>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
   <span className="text-base md:text-[24px] uppercase leading-none">
     Слідкуй за нами
   </span>
@@ -60,8 +60,8 @@ export function Footer() {
         </div>
 
         {/* MENU */}
-        <div className="mt-8 flex justify-end">
-          <nav className="flex flex-wrap justify-end gap-x-10 gap-y-4 text-base md:text-[24px] uppercase">
+        <div className="mt-8 flex md:justify-end">
+          <nav className="flex flex-wrap md:justify-end gap-x-6 md:gap-x-10 gap-y-4 text-base md:text-[24px] uppercase">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         {/* CONTACTS */}
-        <div className="mt-12 space-y-6 text-base md:text-[24px]">
+        <div className="mt-12 space-y-6 text-sm md:text-[24px]">
 
           <div className="flex items-center gap-4">
             <MapPin size={24} className="shrink-0" />
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-20 flex items-center justify-between text-sm md:text-[20px]">
+        <div className="mt-20 flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between text-sm md:text-[20px]">
 
           <span>
             Site by Nazarii P.
@@ -106,9 +106,9 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
 
-            <DoveIcon className="h-8 w-8" />
+            <DoveIcon className="h-8 w-8 shrink-0" />
 
-            <span>
+            <span className="leading-tight">
               Церква «Благодать» Калуш, 2024. Усі права захищено.
             </span>
 
