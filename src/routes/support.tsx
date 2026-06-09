@@ -19,7 +19,6 @@ export const Route = createFileRoute("/support")({
 function SupportPage() {
   return (
     <PageShell>
-      <section className="container-grace pt-4 pb-16">
       <section className="container-grace pt-4 pb-16 overflow-hidden">
         <h1 className="text-h3">ПІДТРИМКА</h1>
 
@@ -40,7 +39,6 @@ function SupportPage() {
         </p>
       </section>
 
-      <section className="bg-secondary/40">
       <section className="bg-secondary/40 overflow-hidden">
         <div className="container-grace py-12 md:py-16">
           <h2 className="text-[22px] md:text-[32px] font-bold text-accent">

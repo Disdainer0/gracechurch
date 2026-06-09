@@ -23,7 +23,6 @@ export const Route = createFileRoute("/ministry")({
 function MinistryPage() {
   return (
     <PageShell>
-      <section className="container-grace pt-6 pb-16 md:pb-24">
       <section className="container-grace pt-6 pb-16 md:pb-24 overflow-hidden">
         <h1 className="text-h3">СЛУЖІННЯ У ЦЕРКВІ "БЛАГОДАТЬ"</h1>
 
