@@ -20,17 +20,17 @@ const nav = [
 export function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="container-grace px-10 pt-10 pb-8">
+      <div className="container-grace pt-8 pb-8">
 
         {/* TOP ROW */}
         <div className="flex justify-between items-start">
 
-          <h2 className="text-[64px] leading-none font-light uppercase tracking-[0.08em]">
+          <h2 className="text-4xl md:text-[64px] leading-none font-light uppercase tracking-[0.08em]">
             Контакти
           </h2>
 
           <div className="flex items-center gap-6">
-  <span className="text-[24px] uppercase leading-none">
+  <span className="text-base md:text-[24px] uppercase leading-none">
     Слідкуй за нами
   </span>
 
@@ -61,7 +61,7 @@ export function Footer() {
 
         {/* MENU */}
         <div className="mt-8 flex justify-end">
-          <nav className="flex flex-wrap justify-end gap-x-10 gap-y-4 text-[24px] uppercase">
+          <nav className="flex flex-wrap justify-end gap-x-10 gap-y-4 text-base md:text-[24px] uppercase">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         {/* CONTACTS */}
-        <div className="mt-12 space-y-6 text-[24px]">
+        <div className="mt-12 space-y-6 text-base md:text-[24px]">
 
           <div className="flex items-center gap-4">
             <MapPin size={24} className="shrink-0" />
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-20 flex items-center justify-between text-[20px]">
+        <div className="mt-20 flex items-center justify-between text-sm md:text-[20px]">
 
           <span>
             Site by Nazarii P.

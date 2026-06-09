@@ -23,7 +23,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       <div className="container-grace flex items-center justify-between py-5 md:py-7">
         <Logo />
 
-        <nav className="hidden lg:flex items-center gap-7 xl:gap-10">
+        <nav className="hidden md:flex items-center gap-7 xl:gap-10">
           {nav.map((n) => (
             <Link
               key={n.to}
@@ -37,7 +37,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4 text-foreground">
+        <div className="hidden md:flex items-center gap-4 text-foreground">
           <a href="#" aria-label="Facebook" className="hover:text-accent transition-colors">
             <Facebook size={20} fill="currentColor" stroke="none" />
           </a>
@@ -50,7 +50,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         </div>
 
         <button
-          className="lg:hidden text-foreground"
+          className="md:hidden text-foreground"
           aria-label="Меню"
           onClick={() => setOpen(true)}
         >
@@ -59,7 +59,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-background lg:hidden">
+        <div className="fixed inset-0 z-50 bg-background md:hidden">
           <div className="container-grace flex items-center justify-between py-5">
             <Logo />
             <button onClick={() => setOpen(false)} aria-label="Закрити" className="text-foreground">
