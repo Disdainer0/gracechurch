@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
-import { PlayIcon } from "@/components/icons/Decor";
-import worship from "@/assets/media-worship.jpg";
 
 export const Route = createFileRoute("/media")({
   head: () => ({
@@ -28,20 +26,18 @@ function MediaPage() {
         </p>
 
         <div className="relative mt-8 aspect-video w-full overflow-hidden bg-secondary">
-          <img
-            src={worship}
-            alt="Онлайн трансляція"
-            loading="lazy"
-            width={1600}
-            height={1000}
-            className="h-full w-full object-cover"
-          />
-          <button
-            aria-label="Грати"
-            className="absolute inset-0 flex items-center justify-center"
-          >
-            <PlayIcon className="h-24 w-24 md:h-36 md:w-36 drop-shadow-2xl" />
-          </button>
+          
+          <div className="mt-10 overflow-hidden">
+           <iframe
+             className="absolute inset-0 block w-full h-full"
+             src="https://www.youtube-nocookie.com/embed/LNb8mjZ0CXo"
+             title="YouTube video player"
+             allowFullScreen
+             referrerPolicy="strict-origin-when-cross-origin"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             style={{ border: 0 }}
+           />
+          </div>
         </div>
       </section>
     </PageShell>

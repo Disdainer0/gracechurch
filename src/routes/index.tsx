@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
-import { CrossIcon, StarBurst, PlayIcon } from "@/components/icons/Decor";
+import { CrossIcon, StarBurst } from "@/components/icons/Decor";
 import heroSmoke from "@/assets/hero-smoke.jpg";
 import aboutWorship from "@/assets/about-worship.jpg";
-import sermonCamera from "@/assets/sermon-camera.jpg";
 import sundayService from "@/assets/sunday-service.jpg";
 import sermonsBook from "@/assets/sermons-book.jpg";
+import shortLogo from "@/assets/shortlogo.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,6 +21,9 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Помісна євангельська церква. Стань частиною.",
       },
+    ],
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: shortLogo },
     ],
   }),
   component: HomePage,
@@ -176,20 +179,17 @@ function HomePage() {
         <h2 className="text-h3">СЛУЖІННЯ</h2>
 
         <div className="mt-10 relative aspect-video w-full overflow-hidden bg-secondary">
-          <img
-            src={sermonCamera}
-            alt="Онлайн трансляція"
-            loading="lazy"
-            width={1200}
-            height={700}
-            className="h-full w-full object-cover"
-          />
-          <button
-            aria-label="Грати"
-            className="absolute inset-0 flex items-center justify-center"
-          >
-            <PlayIcon className="h-20 w-20 md:h-28 md:w-28 drop-shadow-2xl" />
-          </button>
+          <div className="mt-10 overflow-hidden">
+           <iframe
+             className="absolute inset-0 block w-full h-full"
+             src="https://www.youtube-nocookie.com/embed/LNb8mjZ0CXo"
+             title="YouTube video player"
+             allowFullScreen
+             referrerPolicy="strict-origin-when-cross-origin"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             style={{ border: 0 }}
+           />
+          </div>
         </div>
         <p className="mt-6 text-[16px] md:text-[20px]">
           Онлайн трансляція служінь церкви Благодать
