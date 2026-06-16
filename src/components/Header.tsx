@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 
 const nav = [
@@ -14,6 +13,17 @@ const nav = [
 
 export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
   return (
     <header
       className={`${
@@ -56,29 +66,38 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         </div>
 
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground w-7 h-7 flex flex-col justify-center items-center gap-[5px] relative"
           aria-label="Меню"
-          onClick={() => setOpen(true)}
+          onClick={() => setOpen(!open)}
         >
-          <Menu size={28} />
+          <span className={`w-full h-[2px] bg-current transition-all duration-300 ease-in-out ${open ? 'rotate-45 translate-y-[7px]' : ''}`}></span>
+          <span className={`w-full h-[2px] bg-current transition-all duration-300 ease-in-out ${open ? 'opacity-0' : ''}`}></span>
+          <span className={`w-full h-[2px] bg-current transition-all duration-300 ease-in-out ${open ? '-rotate-45 -translate-y-[7px]' : ''}`}></span>
         </button>
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-background md:hidden">
+        <div className="fixed inset-0 z-50 bg-background md:hidden animate-in fade-in duration-300">
           <div className="container-grace flex items-center justify-between py-5">
             <Logo />
-            <button onClick={() => setOpen(false)} aria-label="Закрити" className="text-foreground">
-              <X size={28} />
+            <button
+              className="text-foreground w-7 h-7 flex flex-col justify-center items-center gap-[5px] relative"
+              aria-label="Закрити"
+              onClick={() => setOpen(false)}
+            >
+              <span className="w-full h-[2px] bg-current transition-all duration-300 ease-in-out rotate-45 translate-y-[7px]"></span>
+              <span className="w-full h-[2px] bg-current transition-all duration-300 ease-in-out opacity-0"></span>
+              <span className="w-full h-[2px] bg-current transition-all duration-300 ease-in-out -rotate-45 -translate-y-[7px]"></span>
             </button>
           </div>
           <nav className="container-grace flex flex-col gap-6 pt-10">
-            {nav.map((n) => (
+            {nav.map((n, i) => (
               <Link
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="text-[20px] font-bold uppercase tracking-[0.08em]"
+                className="text-[20px] font-bold uppercase tracking-[0.08em] animate-in slide-in-from-right duration-300"
+                style={{ animationDelay: `${i * 50}ms` }}
                 activeProps={{ className: "text-accent" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
