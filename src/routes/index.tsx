@@ -6,6 +6,7 @@ import aboutWorship from "@/assets/about-worship.jpg";
 import sundayService from "@/assets/sunday-service.jpg";
 import sermonsBook from "@/assets/sermons-book.jpg";
 import shortLogo from "@/assets/shortlogo.svg";
+import mainPhoto from "@/assets/mainphoto.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -92,8 +93,17 @@ function HomePage() {
       </section>
 
       {/* BELIEFS */}
-      <section className="container-grace py-16 md:py-24 overflow-hidden">
-        <h2 className="text-h3">НАШІ ВІРУВАННЯ</h2>
+      <section className="relative isolate py-16 md:py-24 overflow-hidden">
+        <img
+          src={mainPhoto}
+          alt=""
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+
+        <div className="container-grace">
+          <h2 className="text-h3">НАШІ ВІРУВАННЯ</h2>
 
         <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-14 md:grid-cols-12">
           <div className="hidden md:flex md:col-span-5 items-start justify-center">
@@ -171,6 +181,7 @@ function HomePage() {
           <div className="hidden md:flex md:col-span-7 items-start justify-center">
             <StarBurst className="h-24 w-24 text-foreground/80" />
           </div>
+        </div>
         </div>
       </section>
 
