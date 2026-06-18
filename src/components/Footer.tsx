@@ -106,7 +106,7 @@ export function Footer() {
             <DoveIcon className="h-8 w-8 shrink-0" />
 
             <span className="leading-tight">
-              Церква «Благодать» Калуш, 2024. Усі права захищено.
+              Церква «Благодать» Калуш, 2026. Усі права захищено.
             </span>
 
           </div>
