@@ -345,10 +345,7 @@ function MinistryCard({
   const [isExpanded, setIsExpanded] = useState(false);
   const limit = 350;
   const needsExpansion = ministry.content.length > limit;
-  const displayContent = isExpanded || !needsExpansion
-    ? ministry.content
-    : ministry.content.slice(0, limit) + "...";
-
+  const displayContent = ministry.content;
   return (
     <div className="mt-16 md:mt-24">
       <h2 className="text-h4 mb-6">{ministry.tag}</h2>
@@ -363,9 +360,9 @@ function MinistryCard({
         />
         <div className="bg-secondary/90 backdrop-blur-sm p-6 md:p-8 transition-all duration-500 ease-in-out">
           <h3 className="text-[16px] font-semibold mb-4">{ministry.title}</h3>
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            isExpanded ? 'max-h-[10000px]' : 'max-h-[150px]'
-          }`}>
+          <div className={`overflow-clip transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+             isExpanded ? 'max-h-[1200px]' : 'max-h-[150px]'
+           }`}>
             <p className="text-[14px] md:text-[15px] leading-relaxed whitespace-pre-line">
               {displayContent}
             </p>
@@ -373,7 +370,7 @@ function MinistryCard({
           {needsExpansion && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="mt-4 px-5 py-2 text-[14px] font-medium bg-white text-black transition-all duration-200 hover:bg-[#E8000D] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E8000D]"
+              className="mt-4 px-5 py-2 text-[14px] font-medium bg-white text-black transition-all duration-200 hover:bg-[#E8000D] hover:text-white"
               aria-expanded={isExpanded}
             >
               {isExpanded ? "Менше" : "Більше"}
