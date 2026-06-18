@@ -34,13 +34,18 @@ function ContactsPage() {
               <p>Молитовне служіння</p>
             </div>
 
-            <div className="flex items-start gap-3 text-[15px] md:text-[18px]">
+            <a 
+              href="https://www.google.com/maps/place/Tserkva+Khvye+%22Blahodat%CA%B9%22/@49.0215174,24.3695249,19.25z/data=!4m15!1m8!3m7!1s0x4730a2fbe8659041:0x6db19c07a6066c05!2z0LLRg9C70LjRhtGPINCc0LjRhdCw0LnQu9CwINCT0YDRg9GI0LXQstGB0YzQutC-0LPQviwgMjXQsCwg0JrQsNC70YPRiCwg0IbQstCw0L3Qvi3QpNGA0LDQvdC60ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsCwgNzczMDA!3b1!8m2!3d49.0215648!4d24.3695107!16s%2Fg%2F11z8kmjrxk!3m5!1s0x4730a2fbc262bea1:0x389fc6c7287b7571!8m2!3d49.0215648!4d24.3695107!16s%2Fg%2F11gbfjhlrf?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 text-[15px] md:text-[18px] transition-colors hover:text-[#E80010]"
+            >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1 shrink-0">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
               <span>м. Калуш, вул. Михайла Грушевського 25а</span>
-            </div>
+            </a>
           </div>
 
           <div className="md:col-span-6">
