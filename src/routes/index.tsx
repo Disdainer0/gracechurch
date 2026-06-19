@@ -188,7 +188,9 @@ function HomePage() {
       {/* MEDIA */}
       <section className="container-grace py-16 md:py-24 overflow-hidden">
         <h2 className="text-h3">СЛУЖІННЯ</h2>
-
+        <p className="mt-4 text-[16px] md:text-[20px]">
+          Проводимо щонеділі з початком о 11:00
+        </p>
         <div className="mt-10 relative aspect-video w-full overflow-hidden bg-secondary">
           <div className="mt-10 overflow-hidden">
            <iframe
@@ -205,50 +207,6 @@ function HomePage() {
         <p className="mt-6 text-[16px] md:text-[20px]">
           Онлайн трансляція служінь церкви Благодать
         </p>
-
-        {/* Sunday + sermons book */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        <div className="md:col-span-6 relative overflow-hidden">
-          <img
-            src={sundayService}
-            alt="Неділя"
-            loading="lazy"
-            width={800}
-            height={450}
-            className="w-full h-[220px] object-cover"
-          />
-      
-          <div className="absolute inset-0 bg-background/40" />
-      
-          <div className="absolute inset-0 flex flex-col justify-between p-6">
-            <h3 className="text-[36px] md:text-[56px] leading-none font-light">
-              НЕДІЛЯ
-            </h3>
-      
-            <p className="text-[22px] font-light">
-              Служіння об 11:00
-            </p>
-          </div>
-        </div>
-      
-        <div className="md:col-span-3 text-[14px] leading-[1.7] pt-2">
-          Збірка проповідей за 2023 рік слугуватиме нагадуванням істини та
-          мудрості, які Бог відкривав нам. Розмірковуйте разом із нами над
-          словами, що проявлять любов та милість, надихнуть на нові звершення
-          та підтримку на духовному шляху.
-        </div>
-      
-        <div className="md:col-span-3 flex justify-center">
-          <img
-            src={sermonsBook}
-            alt="2023 Проповіді"
-            loading="lazy"
-            width={512}
-            height={768}
-            className="h-[200px] w-auto object-contain"
-          />
-        </div>
-</div>
       </section>
     </PageShell>
   );
