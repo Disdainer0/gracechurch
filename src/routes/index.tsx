@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { CrossIcon, StarBurst } from "@/components/icons/Decor";
-import heroSmoke from "@/assets/hero-smoke.jpg";
+import heroSmoke from "@/assets/mainfog.mp4";
 import aboutWorship from "@/assets/about-worship.jpg";
 import sundayService from "@/assets/sunday-service.jpg";
 import sermonsBook from "@/assets/sermons-book.jpg";
@@ -60,12 +60,13 @@ useEffect(() => {
     <PageShell headerOverlay>
       {/* HERO */}
       <section className="relative isolate min-h-[700px] md:min-h-[860px] overflow-hidden">
-        <img
+        <video
           src={heroSmoke}
-          alt=""
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 -z-10 h-full w-full object-cover"
-          width={1920}
-          height={1080}
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/30 via-background/30 to-background" />
 
