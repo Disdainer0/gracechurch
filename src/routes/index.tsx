@@ -7,6 +7,7 @@ import sundayService from "@/assets/sunday-service.jpg";
 import sermonsBook from "@/assets/sermons-book.jpg";
 import shortLogo from "@/assets/shortlogo.svg";
 import mainPhoto from "@/assets/mainphoto.png";
+import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,6 +32,30 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const [videoId, setVideoId] = useState(null);
+
+useEffect(() => {
+    const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+    const CHANNEL_ID = "UCxAgeSNE3xZbtzN8rqkMCTA";
+  
+    async function loadLatestStream() {
+      try {
+        const response = await fetch(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=completed&type=video&order=date&maxResults=1&key=${API_KEY}`
+        );
+  
+        const data = await response.json();
+  
+        if (data.items?.length) {
+          setVideoId(data.items[0].id.videoId);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  
+    loadLatestStream();
+  }, []);
   return (
     <PageShell headerOverlay>
       {/* HERO */}
@@ -195,7 +220,7 @@ function HomePage() {
           <div className="mt-10 overflow-hidden">
            <iframe
              className="absolute inset-0 block w-full h-full"
-             src="https://www.youtube-nocookie.com/embed/LNb8mjZ0CXo"
+             src={`https://www.youtube-nocookie.com/embed/${videoId}`}
              title="YouTube video player"
              allowFullScreen
              referrerPolicy="strict-origin-when-cross-origin"
