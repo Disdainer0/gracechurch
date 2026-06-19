@@ -164,13 +164,13 @@ function HistoryPage() {
 
           {/* Present-day block */}
           <section className="overflow-hidden bg-neutral-800/65">
-            <div className="container-grace grid grid-cols-1 gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-20">
+            <div className="container-grace grid grid-cols-1 gap-8 py-12 md:grid-cols-12 md:gap-10 md:py-16">
               <div className="hidden md:flex md:col-span-5 items-center justify-center">
-                <DoveIcon className="h-32 w-44 text-white/80" />
+                <DoveIcon className="h-28 w-40 text-white/80" />
               </div>
 
-              <div className="md:col-span-7 space-y-5 text-[15px] md:text-[17px] leading-relaxed text-white">
-                <h2 className="text-[22px] md:text-[28px] font-bold">
+              <div className="md:col-span-7 space-y-3 text-[14px] md:text-[16px] leading-relaxed text-white">
+                <h2 className="text-[20px] md:text-[24px] font-bold">
                   Церква сьогодні
                 </h2>
 
@@ -182,28 +182,28 @@ function HistoryPage() {
                   У церкві активно діють різноманітні служіння:
                 </p>
 
-                <ul className="space-y-2">
-                  <li className="flex gap-3">
+                <ul className="space-y-1">
+                  <li className="flex gap-2">
                     <span aria-hidden>•</span>
                     <span>служіння прославлення;</span>
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex gap-2">
                     <span aria-hidden>•</span>
                     <span>недільна школа;</span>
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex gap-2">
                     <span aria-hidden>•</span>
                     <span>служіння Марти;</span>
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex gap-2">
                     <span aria-hidden>•</span>
                     <span>служіння підтримання порядку;</span>
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex gap-2">
                     <span aria-hidden>•</span>
                     <span>медіаслужіння;</span>
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex gap-2">
                     <span aria-hidden>•</span>
                     <span>дитяче, молодіжне та сімейне служіння.</span>
                   </li>
