@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { DoveIcon } from "@/components/Logo";
 import historyBg from "@/assets/historyphoto.png";
+import presentDayBlock from "@/assets/presentdayblock.JPG";
 import shortLogo from "@/assets/shortlogo.svg";
 
 export const Route = createFileRoute("/history")({
@@ -164,54 +165,64 @@ function HistoryPage() {
 
           {/* Present-day block */}
           <section className="overflow-hidden bg-neutral-800/65">
-            <div className="container-grace grid grid-cols-1 gap-8 py-12 md:grid-cols-12 md:gap-10 md:py-16">
-              <div className="hidden md:flex md:col-span-5 items-center justify-center">
-                <DoveIcon className="h-28 w-40 text-white/80" />
-              </div>
-
-              <div className="md:col-span-7 space-y-3 text-[14px] md:text-[16px] leading-relaxed text-white">
-                <h2 className="text-[20px] md:text-[24px] font-bold">
-                  Церква сьогодні
-                </h2>
-
-                <p>
-                  Сьогодні церква «Благодать» – це велика дружня духовна сім'я, яку очолюють пастори Микола та Ірина Поташник. Разом із ними в служінні беруть участь Олександр та Мирослава Притуляк, служителі Іван Хімій, Денис Притуляк, Іван Савчин, Олег Литвинський, адміністратор Галина Савчин та багато інших посвячених працівників Божої ниви.
-                </p>
-
-                <p>
-                  У церкві активно діють різноманітні служіння:
-                </p>
-
-                <ul className="space-y-1">
-                  <li className="flex gap-2">
-                    <span aria-hidden>•</span>
-                    <span>служіння прославлення;</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span aria-hidden>•</span>
-                    <span>недільна школа;</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span aria-hidden>•</span>
-                    <span>служіння Марти;</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span aria-hidden>•</span>
-                    <span>служіння підтримання порядку;</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span aria-hidden>•</span>
-                    <span>медіаслужіння;</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span aria-hidden>•</span>
-                    <span>дитяче, молодіжне та сімейне служіння.</span>
-                  </li>
-                </ul>
-
-                <p>
-                  Громада постійно поповнюється людьми, які знаходять спасіння в Ісусі Христі, приймають Його любов і присвячують своє життя служінню Богові та ближнім. Церква «Благодать» продовжує виконувати своє покликання – нести Добру Новину, свідчити про безмежну Божу любов і бути місцем надії, віри та духовного відродження для кожного, хто шукає Господа.
-                </p>
+            <div className="container-grace py-12 md:py-16">
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                {/* Photo */}
+                <div className="h-full min-h-[650px]">
+                  <img
+                    src={presentDayBlock}
+                    alt="Пастори церкви Благодать"
+                    className="w-full h-full object-cover rounded-lg shadow-2xl"
+                  />
+                </div>
+          
+                {/* Content */}
+                <div className="space-y-4 text-[14px] md:text-[16px] leading-relaxed text-white">
+                  <h2 className="text-[20px] md:text-[24px] font-bold">
+                    Церква сьогодні
+                  </h2>
+          
+                  <p>
+                    Сьогодні церква «Благодать» – це велика дружня духовна сім'я, яку очолюють пастори Микола та Ірина Поташник. Разом із ними в служінні беруть участь Олександр та Мирослава Притуляк, служителі Іван Хімій, Денис Притуляк, Іван Савчин, Олег Литвинський, адміністратор Галина Савчин та багато інших посвячених працівників Божої ниви.
+                  </p>
+          
+                  <p>
+                    У церкві активно діють різноманітні служіння:
+                  </p>
+          
+                  <ul className="space-y-1">
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>служіння прославлення;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>недільна школа;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>служіння Марти;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>служіння підтримання порядку;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>медіаслужіння;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>дитяче, молодіжне та сімейне служіння.</span>
+                    </li>
+                  </ul>
+          
+                  <p>
+                    Громада постійно поповнюється людьми, які знаходять спасіння в Ісусі Христі, приймають Його любов і присвячують своє життя служінню Богові та ближнім. Церква «Благодать» продовжує виконувати своє покликання – нести Добру Новину, свідчити про безмежну Божу любов і бути місцем надії, віри та духовного відродження для кожного, хто шукає Господа.
+                  </p>
+                </div>
+          
               </div>
             </div>
           </section>
