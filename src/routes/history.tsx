@@ -169,7 +169,7 @@ function HistoryPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Photo */}
-                <div className="h-full min-h-[650px]">
+                <div className="h-full min-h-[350px]">
                   <img
                     src={presentDayBlock}
                     alt="Пастори церкви Благодать"
