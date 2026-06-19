@@ -59,9 +59,14 @@ function SupportPage() {
               <p>Призначення платежу: Добровільні пожертви</p>
             </div>
             <div className="md:col-span-4 md:text-right">
-              <button className="border border-foreground px-6 py-3 text-[14px] md:text-[15px] tracking-wider hover:bg-foreground hover:text-background transition-colors">
+              <a
+                href="https://next.privat24.ua/payments/form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-foreground px-6 py-3 text-[14px] md:text-[15px] tracking-wider hover:bg-foreground hover:text-background transition-colors"
+              >
                 Пожертвувати
-              </button>
+              </a>
             </div>
           </div>
         </div>
