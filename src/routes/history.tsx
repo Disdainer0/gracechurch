@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { DoveIcon } from "@/components/Logo";
 import historyBg from "@/assets/historyphoto.png";
+import shortLogo from "@/assets/shortlogo.svg";
 
 export const Route = createFileRoute("/history")({
   head: () => ({
@@ -14,6 +15,9 @@ export const Route = createFileRoute("/history")({
       },
       { property: "og:title", content: "Історія створення — Церква Благодать" },
       { property: "og:description", content: "Історія церкви Благодать з 1991 року." },
+    ],
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: shortLogo },
     ],
   }),
   component: HistoryPage,

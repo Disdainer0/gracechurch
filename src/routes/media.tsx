@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
+import shortLogo from "@/assets/shortlogo.svg";
 
 export const Route = createFileRoute("/media")({
   head: () => ({
@@ -11,6 +12,9 @@ export const Route = createFileRoute("/media")({
       },
       { property: "og:title", content: "Медіа — Церква Благодать" },
       { property: "og:description", content: "Онлайн трансляції служінь." },
+    ],
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: shortLogo },
     ],
   }),
   component: MediaPage,

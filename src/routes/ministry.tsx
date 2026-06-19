@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { useState } from "react";
+import AnimateHeight from "react-animate-height";
 import graseMedia from "@/assets/grasemedia.JPG";
 import graseHome from "@/assets/grasehome.JPG";
 import graseWorship from "@/assets/graseworship.JPG";
@@ -10,6 +11,8 @@ import graseKids from "@/assets/grasekids.JPG";
 import graseTeensWorship from "@/assets/graseteensworship.JPG";
 import graseCafe from "@/assets/grasecafe.JPG";
 import graseWelcomeTeam from "@/assets/grasewelcometeam.JPG";
+import shortLogo from "@/assets/shortlogo.svg";
+
 
 export const Route = createFileRoute("/ministry")({
   head: () => ({
@@ -22,6 +25,9 @@ export const Route = createFileRoute("/ministry")({
       },
       { property: "og:title", content: "Служіння — Церква Благодать" },
       { property: "og:description", content: "Всі служіння церкви Благодать." },
+    ],
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: shortLogo },
     ],
   }),
   component: MinistryPage,
@@ -360,13 +366,14 @@ function MinistryCard({
         />
         <div className="bg-secondary/90 backdrop-blur-sm p-6 md:p-8 transition-all duration-500 ease-in-out">
           <h3 className="text-[16px] font-semibold mb-4">{ministry.title}</h3>
-          <div className={`overflow-clip transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-             isExpanded ? 'max-h-[1200px]' : 'max-h-[150px]'
-           }`}>
+          <AnimateHeight
+            duration={700}
+            height={isExpanded ? "auto" : 150}
+          >
             <p className="text-[14px] md:text-[15px] leading-relaxed whitespace-pre-line">
               {displayContent}
             </p>
-          </div>
+          </AnimateHeight>
           {needsExpansion && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}

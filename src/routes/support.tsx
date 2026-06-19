@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
+import shortLogo from "@/assets/shortlogo.svg";
 
 export const Route = createFileRoute("/support")({
   head: () => ({
@@ -11,6 +12,9 @@ export const Route = createFileRoute("/support")({
       },
       { property: "og:title", content: "Підтримка — Церква Благодать" },
       { property: "og:description", content: "Реквізити для пожертв." },
+    ],
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: shortLogo },
     ],
   }),
   component: SupportPage,

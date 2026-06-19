@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
+import shortLogo from "@/assets/shortlogo.svg";
 
 export const Route = createFileRoute("/contacts")({
   head: () => ({
@@ -12,6 +13,9 @@ export const Route = createFileRoute("/contacts")({
       },
       { property: "og:title", content: "Контакти — Церква Благодать" },
       { property: "og:description", content: "Розклад богослужінь та адреса." },
+    ],
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: shortLogo },
     ],
   }),
   component: ContactsPage,
