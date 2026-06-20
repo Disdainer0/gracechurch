@@ -259,7 +259,7 @@ const ministries: Ministry[] = [
   {
     id: "teens",
     tag: "GRASE TEENS WORSHIP",
-    title: "Лідер: Настя",
+    title: "Лідер: Анастасія",
     image: graseTeensWorship,
     content: `Підліткова група прославлення (GRASE TEENS WORSHIP)
 
