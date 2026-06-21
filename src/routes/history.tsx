@@ -184,7 +184,7 @@ function HistoryPage() {
                   </h2>
           
                   <p>
-                    Сьогодні церква «Благодать» – це велика дружня духовна сім'я, яку очолюють пастори Микола та Ірина Поташник. Разом із ними в служінні беруть участь Олександр та Мирослава Притуляк, служителі Іван Хімій, Денис Притуляк, Іван Савчин, Олег Литвинський, адміністратор Галина Савчин та багато інших посвячених працівників Божої ниви.
+                    Сьогодні церква «Благодать» – це велика дружня духовна сім'я, яку очолюють пастори Микола та Ірина Поташник. Разом із ними в служінні беруть участь Олександр та Мирослава Притуляк, служителі Іван Хімій, Денис Притуляк, Іван Савчин, Олег Литвинський, бухгалтер Ірина Богач, адміністратор Галина Савчин та багато інших посвячених працівників Божої ниви.
                   </p>
           
                   <p>
@@ -194,27 +194,67 @@ function HistoryPage() {
                   <ul className="space-y-1">
                     <li className="flex gap-2">
                       <span aria-hidden>•</span>
-                      <span>служіння прославлення;</span>
+                      <span>Адміністрація;</span>
                     </li>
                     <li className="flex gap-2">
                       <span aria-hidden>•</span>
-                      <span>недільна школа;</span>
+                      <span>Проповідники;</span>
                     </li>
                     <li className="flex gap-2">
                       <span aria-hidden>•</span>
-                      <span>служіння Марти;</span>
+                      <span>Прославлення;</span>
                     </li>
                     <li className="flex gap-2">
                       <span aria-hidden>•</span>
-                      <span>служіння підтримання порядку;</span>
+                      <span>Недільна школа;</span>
                     </li>
                     <li className="flex gap-2">
                       <span aria-hidden>•</span>
-                      <span>медіаслужіння;</span>
+                      <span>Teens club;</span>
                     </li>
                     <li className="flex gap-2">
                       <span aria-hidden>•</span>
-                      <span>дитяче, молодіжне та сімейне служіння.</span>
+                      <span>Група порядку;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Служіння Марти;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Кафе;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Служіння прибирання;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Дитяче прославлення;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Молитовне служіння;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Домашні групи;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Медіа;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Хор;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Господарське служіння;</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span aria-hidden>•</span>
+                      <span>Театральне.</span>
                     </li>
                   </ul>
           
