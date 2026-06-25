@@ -2,9 +2,7 @@ import { Link } from "@tanstack/react-router";
 import shortLogo from "@/assets/shortlogo.svg";
 
 export function DoveIcon({ className = "" }: { className?: string }) {
-  return (
-    <img src={shortLogo} alt="" className={className} aria-hidden="true" />
-  );
+  return <img src={shortLogo} alt="" className={className} aria-hidden="true" />;
 }
 
 export function Logo({ className = "" }: { className?: string }) {

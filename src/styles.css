@@ -32,13 +32,13 @@
 }
 
 :root {
-  --background: oklch(0.06 0.005 20);          /* #020403 */
-  --foreground: oklch(1 0 0);                  /* #FFFFFF */
+  --background: oklch(0.06 0.005 20); /* #020403 */
+  --foreground: oklch(1 0 0); /* #FFFFFF */
   --primary: oklch(1 0 0);
   --primary-foreground: oklch(0.06 0.005 20);
-  --accent: oklch(0.58 0.245 27);              /* #FF0009 red */
+  --accent: oklch(0.58 0.245 27); /* #FF0009 red */
   --accent-foreground: oklch(1 0 0);
-  --secondary: oklch(0.27 0 0);                /* #393939 */
+  --secondary: oklch(0.27 0 0); /* #393939 */
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.27 0 0);
   --muted-foreground: oklch(0.75 0 0);
@@ -73,7 +73,12 @@
     font-feature-settings: "ss01";
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -125,6 +130,8 @@
     padding-inline: 24px;
   }
   @media (min-width: 768px) {
-    .container-grace { padding-inline: 40px; }
+    .container-grace {
+      padding-inline: 40px;
+    }
   }
 }
