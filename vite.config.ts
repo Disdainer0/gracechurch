@@ -10,4 +10,7 @@ export default defineConfig({
       entry: "server",
     },
   },
+  nitro: {
+    preset: "cloudflare-pages",
+  },
 });
