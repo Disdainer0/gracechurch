@@ -1,6 +1,9 @@
 # Claude Code internal files
 .claude/
 
+# Lock file — Cloudflare uses npm install automatically without it
+package-lock.json
+
 # Logs
 logs
 *.log
