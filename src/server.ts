@@ -3,6 +3,10 @@ import "./lib/error-capture";
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
+type CloudflareEnv = {
+  ASSETS?: { fetch: (r: Request) => Promise<Response> };
+};
+
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
 };
@@ -39,6 +43,23 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const url = new URL(request.url);
+
+    // Sanity Studio SPA routing: serve /admin/index.html for all /admin/* paths
+    // that are not static assets (i.e. no file extension in the last segment).
+    if (url.pathname === "/admin" || url.pathname.startsWith("/admin/")) {
+      const last = url.pathname.split("/").pop() ?? "";
+      const isAsset = last.includes(".");
+      if (!isAsset) {
+        const cfEnv = env as CloudflareEnv;
+        if (cfEnv?.ASSETS) {
+          return cfEnv.ASSETS.fetch(
+            new Request(new URL("/admin/index.html", request.url).toString()),
+          );
+        }
+      }
+    }
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

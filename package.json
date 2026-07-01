@@ -5,14 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "sanity build ./studio-dist && vite build && node scripts/copy-studio.mjs",
     "build:dev": "vite build --mode development",
+    "build:studio": "sanity build ./studio-dist",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
     "sanity": "sanity dev",
     "sanity:build": "sanity build",
-    "sanity:deploy": "sanity deploy"
+    "sanity:deploy": "sanity deploy",
+    "deploy": "npm run build && wrangler deploy --config .output/server/wrangler.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
