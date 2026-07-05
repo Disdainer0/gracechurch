@@ -31,18 +31,23 @@ function MediaPage() {
   useEffect(() => {
     const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
     const CHANNEL_ID = media?.youtubeChannelId || "UCxAgeSNE3xZbtzN8rqkMCTA";
+    const uploadsPlaylistId = CHANNEL_ID.replace(/^UC/, "UU");
 
     async function loadLatestStream() {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=completed&type=video&order=date&maxResults=1&key=${API_KEY}`,
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=1&key=${API_KEY}`,
         );
+        if (!response.ok) {
+          throw new Error(`YouTube API request failed: ${response.status}`);
+        }
         const data = await response.json();
-        if (data.items?.length) {
-          setVideoId(data.items[0].id.videoId);
+        const latestVideoId = data.items?.[0]?.snippet?.resourceId?.videoId;
+        if (latestVideoId) {
+          setVideoId(latestVideoId);
         }
       } catch (error) {
-        console.error(error);
+        console.error("Failed to load latest YouTube video:", error);
       }
     }
 

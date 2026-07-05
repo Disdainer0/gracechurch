@@ -173,7 +173,19 @@ export function Footer() {
 
         {/* BOTTOM */}
         <div className="mt-20 flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between text-sm md:text-[20px]">
-          {data.footerCredits && <span>{data.footerCredits}</span>}
+          <span>
+            Site by{" "}
+            <a href="mailto:potashnyk777@gmail.com" className="transition-colors hover:text-accent hover:underline">
+              Nazarii P.
+            </a>{" "}
+            &amp;{" "}
+            <a
+              href="mailto:workoleksandrkuznietsov@gmail.com"
+              className="transition-colors hover:text-accent hover:underline"
+            >
+              Alexander K.
+            </a>
+          </span>
 
           <div className="flex items-center gap-4">
             <DoveIcon className="h-8 w-8 shrink-0" />
